@@ -1,0 +1,25 @@
+---
+title: Install Node JS in Ubuntu with APT using Nodesource PPA
+description: Step-by-step guide to installing Node JS in Ubuntu 20.04 with APT using Nodesource PPA
+pubDate: 2023-01-19
+---
+
+This is the easiest way to install any version of Node JS in Ubuntu 20.04. This method also installs NPM so you don't have to install it separately.
+
+## Install Node JS using Nodesource PPA
+First, we will install the PPA in order to get access to its packages. From your home directory, use curl to retrieve the installation script for your preferred version. **Make sure to replace 18.x with your preferred version string.**
+```bash
+curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
+
+sudo bash /tmp/nodesource_setup.sh
+```
+The PPA will be added to your configuration and your local package cache will be updated automatically. You can now install the Node.js package by running:
+```bash
+sudo apt install nodejs
+```
+Verify that you have installed the new version by running node with the -v version flag:
+```bash
+node -v
+```
+The NodeSource nodejs package contains both the node binary and npm, so you don’t need to install npm separately.
+

@@ -1,0 +1,26 @@
+---
+title: Install tmux in Ubuntu 20.04
+description: Step-by-step guide to installing tmux in Ubuntu 20.04
+pubDate: 2023-01-19
+---
+
+TODO: write an introduction
+
+## Install tmux in Ubuntu
+To install tmux in ubuntu, open your terminal and run:
+```bash
+sudo apt install tmux
+```
+And that'll install tmux! Pretty easy right? But wait.. there's more..
+
+## Set escape-time to 0 (recommended for vim users)
+If you use Vim, like me, you'll also need to set escape-time to 0 in ~/.tmux.conf file. If that file doesn't already exist you'll have to create by running:
+```bash
+vim ~/.tmux.conf
+```
+Now in this file add this line:
+```
+set -sg escape-time 0
+```
+
+If you don't set this option, in Vim when you press Esc you'll notice a delay, which as you can imagine is annoying as hell for vim users.

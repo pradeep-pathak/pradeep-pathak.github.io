@@ -1,0 +1,50 @@
+---
+title: Install Fish shell and Oh My Fish in Ubuntu 20.04
+description: Step-by-step guide to installing Fish shell and Oh My Fish in Ubuntu 20.04
+pubDate: 2023-01-19
+---
+
+TODO: write an introduction
+
+## Install Fish Shell
+To install latest Fish shell on ubuntu, open the terminal and run:
+```bash
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
+```
+And That's all you need to do to install fish shell. But wait, there's more..
+
+## Make Fish shell your default shell
+In a terminal run:
+```bash
+chsh -s $(which fish)
+```
+to make fish shell default shell for your user.
+
+## Install Oh My Fish (recommended)
+With fish shell you'd also want to install Oh My Fish, which is just as easy to install:
+```bash
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+```
+
+After installing Oh My Fish you can now install a theme for your fish shell. For example if you want to install agnoster, you can install that by running:
+```bash
+omf install agnoster
+```
+
+## Add some configuration (optional)
+~/.config/fish/config.fish is the Fish shell's equivalent of ~/.bashrc. This is how my config.fish looks like:
+```fish
+set -g -x fish_greeting ''
+
+alias la 'ls -A'
+alias cd.. 'cd ..'
+alias c 'clear'
+alias v. 'vim .'
+alias nvim. 'nvim .'
+alias code. 'code . --disable-gpu && exit'
+
+xset r rate 200 39
+```
+
