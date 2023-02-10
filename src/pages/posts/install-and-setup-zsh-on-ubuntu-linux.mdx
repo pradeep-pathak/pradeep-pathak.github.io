@@ -1,0 +1,31 @@
+---
+title: Install and Setup ZSH on Ubuntu Linux
+description: Step-by-step guide to installing and setup ZSH in Ubuntu 20.04
+pubDate: 2023-02-10
+---
+
+## Install ZSH
+```bash
+sudo apt-get install zsh
+```
+
+This command will install ZSH on your computer. Now let's add some plugins to ZSH. We're not going to be using Oh My ZSH because it's bloated. Instead we're going to use [Zap](https://www.zapzsh.org/).
+
+## Install Zap
+To install Zap in ZSH run:
+```zsh
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+```
+
+Now let's install some must-have plugins. Open up .zshrc in Vim or any editor and paste these lines:
+```zsh
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/completions"
+plug 'zsh-users/zsh-autosuggestions'
+plug 'zap-zsh/supercharge'
+```
+
+That's it. After completing all those steps your Zsh prompt should look like this:
+<img src="/assets/blog/Screenshot from 2023-02-10 10-57-18.png" alt="screenshot" />
+
