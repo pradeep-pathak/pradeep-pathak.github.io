@@ -11,6 +11,13 @@ sudo apt-get install zsh
 
 This command will install ZSH on your computer. Now let's add some plugins to ZSH. We're not going to be using Oh My ZSH because it's bloated. Instead we're going to use [Zap](https://www.zapzsh.org/).
 
+## Make ZSH your default shell
+In a terminal run:
+```bash
+chsh -s $(which zsh)
+```
+to make ZSH the default shell for your user.
+
 ## Install Zap
 To install Zap in ZSH run:
 ```zsh
